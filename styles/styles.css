@@ -1,0 +1,90 @@
+h1 {
+    text-align: center;
+    margin-top: 100px;
+    color: rgb(236, 140, 22);
+    
+    
+    
+    
+}
+
+.navigation>li {
+    display: inline;
+
+
+
+
+}
+
+a {
+    color: bisque;
+    text-decoration: none;
+
+}
+
+.navigation {
+    display: flex;
+    /* Macht die Liste zu einem Flex-Container */
+    justify-content: center;
+    /* Zentriert die Elemente im Container */
+    list-style: none;
+    /* Entfernt die Standard-Bullet-Points */
+    padding: 20;
+    margin: 200px;
+}
+
+.navigation li {
+    margin: 70px;
+    /* Passt den Abstand zwischen den Links an */
+    font-size: 18px;
+
+}
+
+p {
+    margin-top: 200px;
+    color: lightgrey;
+    text-align: center;
+    font-size: larger;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Eine Spalte */
+    margin-top: 200px;
+    color: aquamarine;
+    width: 500px;
+    text-align: center;
+    margin-left: 500px;
+}
+
+div {
+    margin-top: 250px;
+
+
+
+
+
+}
+
+
+a {
+    text-decoration: none;
+    color: #e84f07;
+    background-color: #180245;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    /* Leichter Schatten im Normalzustand */
+}
+
+a:hover {
+    background-color: #090000;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1);
+    
+    /* Eingedrückter Effekt beim Hovern */
+}
+
+
+    
+
