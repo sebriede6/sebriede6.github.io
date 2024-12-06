@@ -2,11 +2,13 @@ h1 {
     text-align: center;
     margin-top: 100px;
     color: rgb(236, 140, 22);
-    
-    
-    
-    
+font-family: monospace;
+
+
+
+
 }
+
 
 .navigation>li {
     display: inline;
@@ -16,11 +18,7 @@ h1 {
 
 }
 
-a {
-    color: bisque;
-    text-decoration: none;
 
-}
 
 .navigation {
     display: flex;
@@ -29,20 +27,23 @@ a {
     /* Zentriert die Elemente im Container */
     list-style: none;
     /* Entfernt die Standard-Bullet-Points */
-    padding: 20;
+    
     margin: 200px;
+    
 }
 
 .navigation li {
     margin: 70px;
     /* Passt den Abstand zwischen den Links an */
     font-size: 18px;
+    
+    
 
 }
 
 p {
     margin-top: 200px;
-    color: lightgrey;
+    color: rgb(231, 231, 241);
     text-align: center;
     font-size: larger;
 }
@@ -71,20 +72,23 @@ div {
 a {
     text-decoration: none;
     color: #e84f07;
-    background-color: #180245;
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #090217;
+    padding: 60px 60px;
+    border-radius: 10px;
+    
+    
     /* Leichter Schatten im Normalzustand */
+    
+    
+    
+
+
 }
 
 a:hover {
-    background-color: #090000;
+    background-color: #1f0254;
     box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1);
-    
+
     /* Eingedrückter Effekt beim Hovern */
 }
-
-
-    
 
