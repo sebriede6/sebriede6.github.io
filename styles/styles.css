@@ -29,7 +29,7 @@ h1 {
     /* Entfernt die Standard-Bullet-Points */
 
     margin: 200px;
-    
+
 
 }
 
@@ -48,6 +48,7 @@ p {
     text-align: center;
     font-size: larger;
     font-family: monospace;
+    font-size: large;
 }
 
 form {
@@ -61,9 +62,9 @@ form {
     margin-left: 500px;
 }
 
-div{
+div {
     margin-top: 250px;
-    
+
 
 
 
@@ -79,7 +80,7 @@ a {
     padding: 10px 20px;
     border-radius: 10px;
     font-family: monospace;
-    
+
 
 
     /* Leichter Schatten im Normalzustand */
@@ -96,15 +97,15 @@ a:hover {
 
     /* Eingedrückter Effekt beim Hovern */
 }
-body>div>a{
+
+body>div>a {
     font-family: monospace;
     font-size: x-large;
-    
-    
-}
-h2{
-    margin-top: 200px;
-    
+
+
 }
 
-    
+h2 {
+    margin-top: 200px;
+
+}
