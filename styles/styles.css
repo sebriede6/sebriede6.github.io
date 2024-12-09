@@ -3,19 +3,17 @@ h1 {
     margin-top: 100px;
     color: rgb(236, 140, 22);
     font-family: monospace;
-
-
-
-
 }
 
 
-.navigation>li {
+.navigation li {
     display: inline;
-
-
-
-
+    margin: 70px;
+    /* Passt den Abstand zwischen den Links an */
+    font-size: 2rem;
+    margin: 70px;
+    /* Passt den Abstand zwischen den Links an */
+    font-size: 18px;
 }
 
 
@@ -29,18 +27,10 @@ h1 {
     /* Entfernt die Standard-Bullet-Points */
 
     margin: 200px;
-
-
+    position: relative;
 }
 
-.navigation li {
-    margin: 70px;
-    /* Passt den Abstand zwischen den Links an */
-    font-size: 18px;
 
-
-
-}
 
 p {
     margin-top: 100px;
@@ -48,7 +38,7 @@ p {
     text-align: center;
     font-size: larger;
     font-family: monospace;
-    font-size: large;
+    font-size: 1rem;
 }
 
 form {
@@ -64,12 +54,6 @@ form {
 
 div {
     margin-top: 250px;
-
-
-
-
-
-
 }
 
 
@@ -80,14 +64,6 @@ a {
     padding: 10px 20px;
     border-radius: 10px;
     font-family: monospace;
-
-
-
-    /* Leichter Schatten im Normalzustand */
-
-
-
-
 
 }
 
@@ -109,32 +85,4 @@ h2 {
     margin-top: 200px;
 
 }
-.navigation {
-    display: flex;
-    justify-content: space-between; /* Elemente gleichmäßig verteilen */
-    flex-wrap: wrap; /* Elemente bei Bedarf in eine neue Zeile umbrechen */
-  }
-  
-  .navigation a {
-    padding: 1rem;
-    text-decoration: none;
-    color: #333;
-  }
-  
-  @media (max-width: 768px) {
-    .navigation {
-      flex-direction: column; /* Elemente untereinander anordnen */
-    }
-  }
-  body {
-    background-image: url(images/wp2757861.webp);
-    background-size: cover;
-    background-position: center;
-  }
-  
-  @media (max-width: 768px) {
-    /* Anpassungen für kleinere Bildschirme, z.B. anderes Hintergrundbild */
-    body {
-      background-image: url(images/mobile-background.jpg);
-    }
-  }
+
