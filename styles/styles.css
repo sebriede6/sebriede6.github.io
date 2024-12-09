@@ -13,7 +13,7 @@ h1 {
     font-size: 2rem;
     margin: 70px;
     /* Passt den Abstand zwischen den Links an */
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 
@@ -26,8 +26,8 @@ h1 {
     list-style: none;
     /* Entfernt die Standard-Bullet-Points */
 
-    margin: 200px;
-    position: relative;
+    
+    
 }
 
 
@@ -43,14 +43,17 @@ p {
 }
 
 form {
+    
     display: grid;
     grid-template-columns: 1fr;
     /* Eine Spalte */
     margin-top: 200px;
     color: aquamarine;
-    width: 500px;
+    width: 80%;
     text-align: center;
-    margin-left: 500px;
+    margin-left: 10%;
+    
+    
 }
 
 div {
@@ -97,13 +100,14 @@ body {
    background-repeat: no repeat;
    background-color: #2b1a02;
   }
-  @media only screen and(max-width: 1024px){
+  @media only screen and(max-width: 1024px) {
     .navigation {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content:center;
         list-style: none;
         padding: 0;
+        align-items: center;
     }
   }
     
