@@ -14,7 +14,11 @@ h1 {
     margin: 50px;
     /* Passt den Abstand zwischen den Links an */
     font-size: 18px;
+    
+        display: grid;
+        place-items: center;
 }
+
 
 
 
@@ -67,7 +71,7 @@ a {
     border-radius: 10px;
     font-family: monospace;
     text-wrap: nowrap;
-
+    
 }
 
 a:hover {
@@ -105,9 +109,18 @@ body {
         justify-content:center;
         list-style:none;
         padding:0;
+        
+        
     }
   }
+   .responsive-image{
+    width: 400px;
+    margin: 2% 2%;
+    padding: 10px;
+    background-color: #090217;
     
+}
+
   
     
   
