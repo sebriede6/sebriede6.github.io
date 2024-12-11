@@ -120,6 +120,9 @@ body {
     background-color: #090217;
     
 }
+.responsive-image {
+    transition: transform 0.3s ease-in-out;
+  }
 
   
     
