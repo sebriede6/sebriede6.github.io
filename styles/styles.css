@@ -12,7 +12,7 @@ h1 {
     /* Passt den Abstand zwischen den Links an */
     font-size: 2rem;
     margin: 50px;
-    /* Passt den Abstand zwischen den Links an */
+    list-style: none;
     font-size: 18px;
     
         display: grid;
@@ -30,7 +30,7 @@ h1 {
     list-style: none;
     /* Entfernt die Standard-Bullet-Points */
 
-    margin : 200px;
+    margin : 20px;
     
 }
 
@@ -43,7 +43,7 @@ p {
     font-size: larger;
     font-family: monospace;
     font-size: 18px;
-    text-wrap: nowrap;
+    ;
     font-weight: bold;
 }
 form {
@@ -97,18 +97,22 @@ h2 {
 body {
    background-image: url(../images/eye-relaxing-wallpaper-preview.jpg);
    width: "100%";
+   display: flex;
+   flex-direction: column;
+   margin: 0;
    background-size: cover;
    background-position: center;
    background-repeat: no repeat;
-   background-color: #2b1a02;
+   
   }
   @media (max-width: 1024px) {
-    .navigation {
+    .navigation{
         display: flex;
         flex-direction : column;
         justify-content:center;
         list-style:none;
-        padding:0;
+        
+        
         
         
     }

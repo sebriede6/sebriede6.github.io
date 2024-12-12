@@ -7,3 +7,4 @@ myImage.addEventListener('mouseover', () => {
 myImage.addEventListener('mouseout', () => {
   myImage.style.transform = 'scale(1) translate(0, 0)'; 
 });
+
