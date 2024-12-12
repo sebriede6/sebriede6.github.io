@@ -8,15 +8,15 @@ h1 {
 
 .navigation li {
     display: inline;
-    margin: 70px;
+    margin: 50px;
     /* Passt den Abstand zwischen den Links an */
     font-size: 2rem;
-    margin-left: 
+     
     list-style: none;
     font-size: 18px;
     
-        display: grid;
-        place-items: center;
+    display: grid;
+    place-items: center;
 }
 
 
@@ -89,7 +89,8 @@ body>div>a {
 }
 
 h2 {
-margin-top: 1%;
+margin-top: 5%;
+margin: 1px;
 
 }
 
@@ -103,6 +104,8 @@ body {
    background-size: cover;
    background-position: center;
    background-repeat: no repeat;
+   min-height: 100vh; /* Stellt sicher, dass der Hintergrund die gesamte Viewport-Höhe abdeckt */
+   margin: 0;
    
   }
   @media (max-width: 1024px) {
@@ -111,6 +114,8 @@ body {
         flex-direction : column;
         justify-content:center;
         list-style:none;
+        align-items: center;
+        font-size: 1rem;
         
         
         
