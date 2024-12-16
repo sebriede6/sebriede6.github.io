@@ -83,14 +83,14 @@ h1 {
 }
 
 .todo-list>li>button {
-    background-color: #d9534f;
+    background-color: #b2c80e;
     color: #ffffff;
     border-radius: 5px;
     padding: 5px 10px;
 }
 
 .todo-list>li>button:hover {
-    background-color: #c9302c;
+    background-color: #a41212;
 }
 
 .todo-info {
