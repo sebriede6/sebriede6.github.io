@@ -99,3 +99,17 @@ h1 {
     color: #666666;
     margin-top: 20px;
 }
+
+.status-text {
+    font-family: monospace;
+    margin-left: 10px; 
+}
+
+.erledigt {
+    color: green; 
+    font-weight: bold; 
+}
+
+.nicht-erledigt {
+    color: red; 
+}
