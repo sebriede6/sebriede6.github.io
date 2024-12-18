@@ -1,84 +1,98 @@
 
 
-const form = document.querySelector('.todo-form'); // const, da das Formular nicht neu zugewiesen wird
-const input = document.querySelector('.todo-input'); // const, da das Input-Element nicht neu zugewiesen wird
-const todoList = document.querySelector('.todo-list'); // const, da die Liste ul nicht neu zugewiesen wird
+const form = document.getElementById('todo-form'); 
+const input = document.getElementById('newTodoInput'); 
+const todoList = document.getElementById('todo-list'); 
 
-// Array erstellen, das die Todo Einträge speichert
 
-let todos = []; // let, da das Array der Aufgaben sich ändert, in diesem Array werden die Aufgaben gespeichert
 
-// fügt dem Formular einen Event Listener hinzu. Dieser Listener wird ausgelöst, 
-// wenn das Formular abgeschickt wird z.B. durch Drücken des "Hinzufügen"-Buttons
+let todos = []; 
+
+ // Funktion zum Laden von To-dos aus dem Local Storage
+function loadTodos() {
+    const storedTodos = localStorage.getItem('todos');
+    if (storedTodos) {
+        todos = JSON.parse(storedTodos);
+    }
+    renderTodos();
+}
+
+// Funktion zum Speichern der To-dos im Local Storage
+function saveTodos() {
+    localStorage.setItem('todos', JSON.stringify(todos));
+}
+
+// Lade gespeicherte To-dos beim Seitenstart
+loadTodos();
+ 
+
 
 form.addEventListener('submit', (event) => {
-    event.preventDefault(); // Verhindert das Neuladen der Seite
+    event.preventDefault(); 
 
-    const todoText = input.value.trim(); // Entfernt Leerzeichen
+    const todoText = form.newTodo.value.trim(); 
 
     if (todoText === '') {
-        return; // Beendet die Funktion, wenn das Eingabefeld leer ist
+        return; 
     }
 
-    // definiert ein neues Objekt für die Aufgabe Das todo-Objekt speichert den Aufgabentext (text), 
-    // den Erledigungsstatus (completed) und eine eindeutige ID (id). Date.now() generiert einen Zeitstempel, 
-    // der als ID verwendet wird
+    
     const todo = {
         text: todoText,
         completed: false,
         id: Date.now()
-    }; // const, da das Objekt nicht neu zugewiesen wird
+    }; 
 
 
-    // fügt das neue todo-Objekt dem todos-Array hinzu
+    
 
     todos.push(todo);
-    input.value = ''; // Leert das Eingabefeld
+    input.value = ''; 
 
-    renderTodos(); //  ruft die Funktion auf, die die To-Do-Liste im DOM aktualisiert
+    renderTodos(); 
 });
 
 function renderTodos() {
-    todoList.innerHTML = ''; // Leert die Liste, bevor sie neu gerendert wird
+    todoList.innerHTML = ''; 
 
-    todos.forEach(todo => {   // iteriert über das todo-Array
-        const li = document.createElement('li'); // erstellt ein neues Listenelement
+    todos.forEach(todo => {   
+        const li = document.createElement('li'); 
 
-        const checkbox = document.createElement('input'); // erstellt ein neues Checkbox-Element
-        checkbox.type = 'checkbox'; // setzt den Typ der Checkbox
-        checkbox.checked = todo.completed; // setzt den Checkbox-Status entsprechend dem completet Status der Aufgabe, wenn ich ein Häckchen reinmache
-        checkbox.ariaLabel = "Aufgabe erledigen" // setzt ein aria-Label
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox'; 
+        checkbox.checked = todo.completed; 
+        checkbox.ariaLabel = "Aufgabe erledigen" 
 
-        checkbox.addEventListener('change', () => {  // aktualisiert den completed-Status der Aufgabe und rendert die Liste neu
+        checkbox.addEventListener('change', () => {  
             todo.completed = checkbox.checked;
             renderTodos();
         });
 
-        const span = document.createElement('span'); // erstellt ein neues span-Element für den Aufgabentext
-        span.textContent = todo.text; // setzt den Text des span-Elements
+        const span = document.createElement('span'); 
+        span.textContent = todo.text; 
         if (todo.completed) {
-            span.style.textDecoration = 'line-through'; // fügt eine Durchstreichung hinzu, wenn man die Aufgabe als erledigt anklickt
+            span.style.textDecoration = 'line-through'; 
         }
 
-        const statusText = document.createElement('span'); // Neues Span für den Status
+        const statusText = document.createElement('span'); 
         statusText.classList.add('status-text');
-        statusText.classList.add(todo.completed ? 'erledigt' : 'nicht-erledigt'); // legt eine Klasse fest, weil ich den Text stylen möchte
+        statusText.classList.add(todo.completed ? 'erledigt' : 'nicht-erledigt'); 
         statusText.textContent = todo.completed ? '(erledigt)' : '(noch nicht erledigt)';
 
 
 
-        const deleteButton = document.createElement('button'); // erstellt einen Löschbutton, wird nicht geändert, deshalb const
-        deleteButton.textContent = 'Löschen';
+        const deleteButton = document.createElement('button'); 
+        deleteButton.textContent = "löschen";
         deleteButton.ariaLabel = "Aufgabe löschen"
-        deleteButton.addEventListener('click', () => {   // filtert die Aufgabe anhand ihrer id aus dem todos-Array und rendert die Liste neu.
+        deleteButton.addEventListener('click', () => {   
             todos = todos.filter(t => t.id !== todo.id);
             renderTodos();
         });
 
-        li.appendChild(checkbox);  // fügt die Checkbox, den Span und den Button dem li-Element hinzu
+        li.appendChild(checkbox);  
         li.appendChild(span);
         li.appendChild(statusText);
         li.appendChild(deleteButton);
-        todoList.appendChild(li); // fügt das li-Element der ul-Liste hinzu
+        todoList.appendChild(li); 
     });
 }
