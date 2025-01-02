@@ -3,22 +3,21 @@ h1 {
     margin-top: 100px;
     color: rgb(89, 1, 1);
     font-family: monospace;
-    font-size: 60px;
+    font-size: 40;
 }
 
 
 .navigation li {
     display: inline;
-    margin: 40px;
+    margin: 50px;
 
-    font-size: 28px;
+    font-size: 25px;
      
     list-style: none;
     
     
     display: grid;
     place-items: center;
-    margin-top: 100px;
 }
 
 
@@ -111,12 +110,12 @@ body {
     background-repeat: no repeat;
     min-height: 100vh;
     /* Stellt sicher, dass der Hintergrund die gesamte Viewport-Höhe abdeckt */
-    margin: 0;
+    
 
 }
 
 @media (max-width: 1024px) {
-    .navigation {
+    .navigation>li {
         display: flex;
         flex-direction: column;
         justify-content: center;
