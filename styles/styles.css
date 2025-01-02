@@ -11,10 +11,10 @@ h1 {
     margin: 50px;
     /* Passt den Abstand zwischen den Links an */
     font-size: 2rem;
-     
+
     list-style: none;
     font-size: 18px;
-    
+
     display: grid;
     place-items: center;
 }
@@ -30,8 +30,8 @@ h1 {
     list-style: none;
     /* Entfernt die Standard-Bullet-Points */
 
-    margin : 20px;
-    
+    margin: 20px;
+
 }
 
 
@@ -46,17 +46,20 @@ p {
     ;
     font-weight: bold;
 }
+
 form {
     display: grid;
     grid-template-columns: 1fr;
-    margin: 0 auto; /* Zentriert das Formular horizontal */
-    width: 80%; /* Macht das Formular responsiv */
+    margin: 0 auto;
+    /* Zentriert das Formular horizontal */
+    width: 80%;
+    /* Macht das Formular responsiv */
     padding: 20px;
     border: 5px solid #130000;
     border-radius: 5px;
     background-color: #e8cc53;
     margin: 100px auto 0 auto;
-  }
+}
 
 div {
     margin: 150px 0 auto 0;
@@ -71,7 +74,7 @@ a {
     border-radius: 10px;
     font-family: monospace;
     text-wrap: nowrap;
-    
+
 }
 
 a:hover {
@@ -89,51 +92,69 @@ body>div>a {
 }
 
 h2 {
-margin-top: 5%;
-margin: 1px;
+    margin-top: 5%;
+    margin: 1px;
 
 }
 
 
 body {
-   background-image: url(../images/eye-relaxing-wallpaper-preview.jpg);
-   width: "100%";
-   display: flex;
-   flex-direction: column;
-   margin: 0;
-   background-size: cover;
-   background-position: center;
-   background-repeat: no repeat;
-   min-height: 100vh; /* Stellt sicher, dass der Hintergrund die gesamte Viewport-Höhe abdeckt */
-   margin: 0;
-   
-  }
-  @media (max-width: 1024px) {
-    .navigation{
+    background-image: url(../images/eye-relaxing-wallpaper-preview.jpg);
+    width: "100%";
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no repeat;
+    min-height: 100vh;
+    /* Stellt sicher, dass der Hintergrund die gesamte Viewport-Höhe abdeckt */
+    margin: 0;
+
+}
+
+@media (max-width: 1024px) {
+    .navigation {
         display: flex;
-        flex-direction : column;
-        justify-content:center;
-        list-style:none;
+        flex-direction: column;
+        justify-content: center;
+        list-style: none;
         align-items: center;
-        font-size: 1,5rem;
-        
-        
-        
-        
+        font-size: 1, 5rem;
+
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .navigation li {
+            font-size: 1.5rem;
+        }
+
+
+        p {
+            font-size: 1.5rem;
+        }
     }
-  }
-   .responsive-image{
+
+
+}
+
+
+.responsive-image {
     width: 400px;
     margin: 2% 2%;
     padding: 10px;
     background-color: #090217;
     z-index: 1;
-    
+
 }
+
 .responsive-image {
     transition: transform 0.3s ease-in-out;
-  }
- #badge {
+}
+
+#badge {
     padding: 10px;
     width: 15%;
     height: 25%;
@@ -141,8 +162,9 @@ body {
     margin-top: 5%;
     transition: transform 0.3s ease-in-out;
 
- }
- #spielerei{
+}
+
+#spielerei {
     font-family: monospace;
     font-weight: 500;
- }
+}
