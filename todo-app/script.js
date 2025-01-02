@@ -3,6 +3,7 @@ const input = document.getElementById('newTodoInput');
 const todoList = document.getElementById('todo-list');
 
 let todos = [];
+new Date();
 
 // Funktion zum Laden von To-dos aus dem Local Storage
 function loadTodos() {
