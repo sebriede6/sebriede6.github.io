@@ -115,7 +115,7 @@ body {
 }
 
 @media (max-width: 1024px) {
-    .navigation>li {
+    .navigation {
         display: flex;
         flex-direction: column;
         justify-content: center;
