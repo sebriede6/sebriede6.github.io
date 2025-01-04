@@ -1,0 +1,148 @@
+h1 {
+    text-align: center;
+    margin-top: 100px;
+    color: rgb(89, 1, 1);
+    font-family: monospace;
+    font-size: 40;
+  }
+  
+  .navigation li {
+    display: inline;
+    margin: 50px;
+  
+    font-size: 25px;
+  
+    list-style: none;
+  
+    display: grid;
+    place-items: center;
+  }
+  
+  .navigation {
+    display: flex;
+    /* Macht die Liste zu einem Flex-Container */
+    justify-content: center;
+    /* Zentriert die Elemente im Container */
+    list-style: none;
+    /* Entfernt die Standard-Bullet-Points */
+  
+    margin: 20px;
+  }
+  
+  p {
+    margin-top: 100px;
+    color: rgb(89, 1, 1);
+    text-align: center;
+    font-size: larger;
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    /* Zentriert das Formular horizontal */
+    width: 80%;
+    /* Macht das Formular responsiv */
+    padding: 20px;
+    border: 5px solid #130000;
+    border-radius: 5px;
+    background-color: #e8cc53;
+    margin: 100px auto 0 auto;
+  }
+  
+  div {
+    margin: 150px 0 auto 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #e84f07;
+    background-color: #090217;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: monospace;
+    text-wrap: nowrap;
+  }
+  
+  a:hover {
+    background-color: #1f0254;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1);
+  
+    /* Eingedrückter Effekt beim Hovern */
+  }
+  
+  body > div > a {
+    font-family: monospace;
+    font-size: x-large;
+  }
+  
+  h2 {
+    margin-top: 5%;
+    margin: 1px;
+  }
+  
+  body {
+    background-image: url(../images/eye-relaxing-wallpaper-preview.jpg);
+    width: "100%";
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no repeat;
+    min-height: 100vh;
+    /* Stellt sicher, dass der Hintergrund die gesamte Viewport-Höhe abdeckt */
+  }
+  
+  @media (max-width: 1024px) {
+    .navigation {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      list-style: none;
+      align-items: center;
+      font-size: 2, 5rem;
+  
+      h1 {
+        font-size: 2.5rem;
+      }
+  
+      .navigation li {
+        font-size: 2, 5rem;
+      }
+  
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  
+  .responsive-image {
+    width: 400px;
+    margin: 2% 2%;
+    padding: 10px;
+    background-color: #090217;
+    z-index: 1;
+  }
+  
+  .responsive-image {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #badge {
+    padding: 10px;
+    width: 15%;
+    height: 25%;
+    background-color: #090217;
+    margin-top: 5%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #spielerei {
+    font-family: monospace;
+    font-weight: 500;
+  }
+  
