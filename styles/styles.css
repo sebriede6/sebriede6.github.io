@@ -27,6 +27,7 @@ h1 {
     /* Entfernt die Standard-Bullet-Points */
   
     margin: 20px;
+    
   }
   
   p {
@@ -65,6 +66,7 @@ h1 {
     border-radius: 10px;
     font-family: monospace;
     text-wrap: nowrap;
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.3), 0 0 8px rgba(0, 0, 0, 0.15)
   }
   
   a:hover {
