@@ -2,8 +2,8 @@ h1 {
     text-align: center;
     margin-top: 100px;
     color: rgb(89, 1, 1);
-    font-family: monospace;
-    font-size: 40;
+    font-family: Metalmania;
+    font-size: 40px;
   }
   
   .navigation li {
@@ -147,4 +147,15 @@ h1 {
     font-family: monospace;
     font-weight: 500;
   }
+
+  #spielerei2 {
+    font-family: monospace;
+    font-weight: 500;
+  }
   
+  @font-face {
+    font-family: 'Metalmania';
+    src: url('../images/MetalMania-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
