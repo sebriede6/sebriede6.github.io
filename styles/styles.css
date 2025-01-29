@@ -159,3 +159,26 @@ h1 {
     font-weight: normal;
     font-style: normal;
 }
+/* Styling für die Bild-Container */
+.image-container {
+  display: flex;
+  justify-content: space-between; /* Verteilt die Bilder gleichmäßig */
+  flex-wrap: wrap; /* Ermöglicht Umbruch der Bilder bei Bedarf */
+  gap: 20px; /* Abstand zwischen den Bildern */
+  margin-top: 50px;
+  padding: 10px;
+  justify-content: center; /* Zentriert die Bilder innerhalb des Containers */
+}
+
+.image-container img {
+  max-width: 25%;
+  height: auto;
+  border-radius: 10px;
+  background-color: #090217;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+  transform: scale(1.5); /* Vergrößert das Bild beim Hover */
+}
