@@ -177,6 +177,7 @@ h1 {
   background-color: #090217;
   padding: 10px;
   transition: transform 0.3s ease-in-out;
+  border: 2px 
 }
 
 .image-container img:hover {
