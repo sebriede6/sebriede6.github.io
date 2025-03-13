@@ -62,7 +62,7 @@ h1 {
     text-decoration: none;
     color: #e84f07;
     background-color: #090217;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 10px;
     font-family: monospace;
     text-wrap: nowrap;
@@ -182,3 +182,4 @@ h1 {
 .image-container img:hover {
   transform: scale(1.5); /* Vergrößert das Bild beim Hover */
 }
+

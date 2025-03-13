@@ -2,6 +2,7 @@ const myImage = document.querySelector(".responsive-image");
 const badgeImage = document.getElementById("badge");
 const zertImage = document.getElementById("zert");
 
+
 // Event Listener für das erste Bild
 myImage.addEventListener("mouseover", () => {
   myImage.style.transition = "transform 0.3s ease-in-out";
