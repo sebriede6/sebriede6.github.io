@@ -9,33 +9,34 @@
     "></script>
     <style>
         body {
-            margin: 0;
-            overflow: hidden;
-            background: black;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-        canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-        .navigation {
-            list-style: none;
-            padding: 20px;
-            display: flex;
-            gap: 20px;
-        }
-        .navigation li a {
-            text-decoration: none;
-            color: cyan;
-            font-size: 24px;
-            transition: color 0.1s linear;
-        }
-        .navigation li a:hover {
-            color: white;
-        }
+        margin: 0;
+        overflow-x: hidden; /* Nur horizontales Scrollen deaktivieren */
+        background: black;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+    canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .navigation {
+        list-style: none;
+        padding: 20px;
+        display: flex;
+        flex-direction: column; /* Links untereinander anordnen */
+        gap: 20px;
+    }
+    .navigation li a {
+        text-decoration: none;
+        color: cyan;
+        font-size: 24px;
+        transition: color 0.1s linear;
+    }
+    .navigation li a:hover {
+        color: white;
+    }
         #spielerei3 a {
   color: cyan; /* Sichtbare Farbe für den Link */
   text-decoration: none; /* Entfernt die Unterstreichung */
