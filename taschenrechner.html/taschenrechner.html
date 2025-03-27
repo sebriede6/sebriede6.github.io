@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taschenrechner</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Deine bisherigen Tailwind-ähnlichen Styles */
+    body {
+      background-color: #1a202c;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .calculator {
+      background-color: #2d3748;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 320px;
+    }
+    .display {
+      background-color: #4a5568;
+      color: white;
+      font-size: 2rem;
+      text-align: right;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .button {
+      background-color: #718096;
+      color: white;
+      font-size: 1.2rem;
+      padding: 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .button:hover {
+      background-color: #4a5568;
+      transform: scale(1.05);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    .button.operator {
+      background-color: #ed8936;
+    }
+    .button.operator:hover {
+      background-color: #dd6b20;
+    }
+    .button.clear {
+      background-color: #e53e3e;
+    }
+    .button.clear:hover {
+      background-color: #c53030;
+    }
+    /* Schimmer-Effekt für den Löschen-Button */
+.button.clear {
+  background: linear-gradient(90deg, rgba(255, 0, 0, 0.5) 25%, rgba(255, 0, 0, 1) 50%, rgba(255, 0, 0, 0.5) 75%);
+  background-size: 200% 100%;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.button.clear:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.button.clear {
+  animation: shimmer 2s infinite;
+}
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+      <button class="button" onclick="appendValue('7')">7</button>
+      <button class="button" onclick="appendValue('8')">8</button>
+      <button class="button" onclick="appendValue('9')">9</button>
+      <button class="button operator" onclick="appendValue('/')">/</button>
+
+      <button class="button" onclick="appendValue('4')">4</button>
+      <button class="button" onclick="appendValue('5')">5</button>
+      <button class="button" onclick="appendValue('6')">6</button>
+      <button class="button operator" onclick="appendValue('*')">*</button>
+
+      <button class="button" onclick="appendValue('1')">1</button>
+      <button class="button" onclick="appendValue('2')">2</button>
+      <button class="button" onclick="appendValue('3')">3</button>
+      <button class="button operator" onclick="appendValue('-')">-</button>
+
+      <button class="button" onclick="appendValue('0')">0</button>
+      <button class="button" onclick="appendValue('.')">.</button>
+      <button class="button clear" onclick="clearDisplay()">C</button>
+      <button class="button operator" onclick="appendValue('+')">+</button>
+
+      <button class="button operator" style="grid-column: span 4;" onclick="calculate()">=</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
