@@ -1,10 +1,11 @@
 h1 {
     text-align: center;
     margin-top: 100px;
-    color: rgb(89, 1, 1);
+    color: rgb(139, 59, 9);
     font-family: Metalmania;
     font-size: 40px;
   }
+  
   
   .navigation li {
     display: inline;
@@ -87,16 +88,43 @@ h1 {
   }
   
   body {
-    background-image: url(../images/eye-relaxing-wallpaper-preview.jpg);
-    width: "100%";
+    background-color: #121212; /* Dunkler Hintergrund */
+    color: #ffffff; /* Helle Schriftfarbe für besseren Kontrast */
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no repeat;
-    min-height: 100vh;
-    /* Stellt sicher, dass der Hintergrund die gesamte Viewport-Höhe abdeckt */
+    min-height: 100vh; /* Stellt sicher, dass der Hintergrund die gesamte Viewport-Höhe abdeckt */
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  h1 {
+    margin: 80px 0;
+    text-align: center;
+  }
+  
+  .link-mit-schatten {
+    margin: 10px auto;
+    text-align: center;
+  }
+  
+  .navigation {
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  html, body {
+    height: 100%;
+    overflow-x: hidden;
   }
   
   @media (max-width: 1024px) {
@@ -146,6 +174,7 @@ h1 {
   #spielerei {
     font-family: monospace;
     font-weight: 500;
+    
   }
 
   #spielerei2 {
@@ -249,7 +278,7 @@ a:hover::before {
   left: -100%;
   width: 200%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(5, 1, 122, 0.2) 0%, rgba(26, 2, 119, 0.5) 50%, rgb(2, 99, 3) 100%);
+  background: linear-gradient(90deg, rgba(5, 1, 122, 0.2) 0%, rgba(184, 90, 7, 0.5) 50%, rgb(173, 2, 2) 100%);
   animation: shimmer 2s infinite;
 }
 
@@ -267,4 +296,27 @@ a:hover {
   100% {
     left: 90%;
   }
+}
+#jo {
+  font-size: 3rem; /* Schriftgröße anpassen */
+  color: #140202; /* Textfarbe */
+  text-align: center; /* Zentriert den Text */
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #170601, 0 0 10px #ffffff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff;
+  }
+  100% {
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ff5e00, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+  }
+}
+#spielerei a {
+  color: cyan; /* Setzt die Schriftfarbe auf Cyan */
+  text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
+#spielerei a:hover {
+  color: white; /* Ändert die Farbe beim Hover auf Weiß */
 }

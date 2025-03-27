@@ -1,32 +1,59 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="de">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Sebastian Riede-Zwätz</title>
     <link rel="stylesheet" href="./styles/styles.css">
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.1.3/pixi.min.js"></script>
+    "></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .navigation {
+            list-style: none;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        .navigation li a {
+            text-decoration: none;
+            color: cyan;
+            font-size: 24px;
+            transition: color 0.1s linear;
+        }
+        .navigation li a:hover {
+            color: white;
+        }
+    </style>
 </head>
-
 <body>
-    
-    <h1>Hallo, ich bin Sebastian</h1>
 
-<ul class="navigation">
-    
-    <h2><li><a href="aboutme.html" id="link1">über mich</a></li></h2>
-    <h2><li><a href="kontakt.html" id="link2">Kontakt</a></li></h2>
-    <h2><li><a href="meinearbeit.html" id="link3">Meine Projekte</a></li></h2>
-    <h2><li><a href="cert.html"> Zertifikate</a></h2></li>
-    
-</ul> 
-<p id="spielerei2"><a href="https://techquiz.de">Meine erste Website... </a></p>
+    <canvas id="bg"></canvas>
 
-  
+    <h1 id="jo">Hallo, ich bin Sebastian</h1>
 
+    <ul class="navigation">
+        <li><a href="aboutme.html">Über mich</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="meinearbeit.html">Meine Projekte</a></li>
+        <li><a href="cert.html">Zertifikate</a></li>
+    </ul>
 
+    <p id="spielerei2"><a href="https://techquiz.de">Meine erste Website...</a></p>
 
-
+    <script src="./script.js"defer></script>
 
 </body>
-
 </html>
