@@ -313,3 +313,14 @@ a:hover {
 #spielerei a:hover {
   color: white; /* Ändert die Farbe beim Hover auf Weiß */
 }
+body {
+  background: black;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+
+input[type="range"], input[type="color"], select {
+  margin: 10px;
+}

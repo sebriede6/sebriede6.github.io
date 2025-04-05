@@ -14,8 +14,33 @@
              Wer hätte gedacht, dass aus einem Maschinenbediener mal ein Webentwickler wird?<br>
               Ich habe mein Leben lang mit Ölen und Schrauben gearbeitet <br> und jetzt schreibe ich Zeilen für Zeilen Code. <br>
               Aber hey, wer braucht schon einen Schraubenschlüssel,<br> wenn man mit ein paar Tasten die digitale Welt gestalten kann?<br>
-              Klicke gerne auf den Link "Meine Projekte" um genaueres über meine Arbeit zu erfahren!
+              Klicke gerne auf den Link "Meine Projekte" -ganz unten auf der Seite- um genaueres über meine Arbeit zu erfahren!
         </p>
+
+        <h2 style="color: white;">Spiel mit den Partikeln :)</h2>
+
+<label for="colorPicker" style="color: white;">Farbe wählen:</label>
+<input type="color" id="colorPicker" value="#00ff00">
+
+<label for="speedSlider" style="color: white;">Rotationsgeschwindigkeit:</label>
+<input type="range" id="speedSlider" min="0.001" max="0.05" step="0.001" value="0.01">
+
+<label for="sizeSlider" style="color: white;">Größe (Radius):</label>
+<input type="range" id="sizeSlider" min="50" max="400" step="10" value="200">
+
+<label for="typeSelect" style="color: white;">Partikel-Typ:</label>
+<select id="typeSelect">
+  <option value="sphere">Kugel</option>
+  <option value="ring">Ring</option>
+  <option value="chaos">Chaos</option>
+</select>
+
+<label style="color: white;">
+  <input type="checkbox" id="rainbowToggle"> Regenbogen-Modus
+</label>
+
+<canvas id="canvas" width="600" height="600" style="display:block;margin:20px auto;"></canvas>
+
 
         <ul class="navigation">
             <li><a href="index.html">home</a></li>
@@ -31,5 +56,116 @@
             <a href="taschenrechner.html/taschenrechner.html" target="_blank">eine kleine Spielerei ; )</a>
             
         </div> 
+        <script>
+            const canvas = document.getElementById("canvas");
+            const ctx = canvas.getContext("2d");
+            
+            let width = canvas.width = 600;
+            let height = canvas.height = 600;
+            
+            let radius = 200;
+            let angle = 0;
+            let color = "#00ff00";
+            let speed = 0.01;
+            let particleType = "sphere";
+            let rainbowMode = false;
+            let mouseX = 0;
+            let targetAngle = 0;
+            
+            // UI-Elemente
+            const colorPicker = document.getElementById("colorPicker");
+            const speedSlider = document.getElementById("speedSlider");
+            const sizeSlider = document.getElementById("sizeSlider");
+            const typeSelect = document.getElementById("typeSelect");
+            const rainbowToggle = document.getElementById("rainbowToggle");
+            
+            colorPicker.addEventListener("input", (e) => color = e.target.value);
+            speedSlider.addEventListener("input", (e) => speed = parseFloat(e.target.value));
+            sizeSlider.addEventListener("input", (e) => radius = parseInt(e.target.value));
+            typeSelect.addEventListener("change", (e) => particleType = e.target.value);
+            rainbowToggle.addEventListener("change", (e) => rainbowMode = e.target.checked);
+            
+            canvas.addEventListener("mousemove", (e) => {
+              const rect = canvas.getBoundingClientRect();
+              mouseX = e.clientX - rect.left;
+              targetAngle = (mouseX / width - 0.5) * 4;
+            });
+            
+            function generateParticles() {
+              const arr = [];
+              for (let i = 0; i < 800; i++) {
+                if (particleType === "sphere") {
+                  const theta = Math.random() * 2 * Math.PI;
+                  const phi = Math.acos((Math.random() * 2) - 1);
+                  arr.push({ theta, phi });
+                } else if (particleType === "ring") {
+                  const angle = Math.random() * 2 * Math.PI;
+                  arr.push({ ringX: Math.cos(angle), ringY: Math.sin(angle) });
+                } else if (particleType === "chaos") {
+                  arr.push({
+                    x: (Math.random() - 0.5) * 2 * radius,
+                    y: (Math.random() - 0.5) * 2 * radius,
+                    z: (Math.random() - 0.5) * 2 * radius
+                  });
+                }
+              }
+              return arr;
+            }
+            
+            let particles = generateParticles();
+            typeSelect.addEventListener("change", () => { particles = generateParticles(); });
+            
+            function draw() {
+              ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
+              ctx.fillRect(0, 0, width, height);
+              ctx.save();
+              ctx.translate(width / 2, height / 2);
+            
+              angle += speed + (mouseX / width - 0.5) * 0.005;
+
+
+            
+              for (let i = 0; i < particles.length; i++) {
+                let x, y, z;
+            
+                if (particleType === "sphere") {
+                  const { theta, phi } = particles[i];
+                  x = radius * Math.sin(phi) * Math.cos(theta);
+                  y = radius * Math.sin(phi) * Math.sin(theta);
+                  z = radius * Math.cos(phi);
+                } else if (particleType === "ring") {
+                  const p = particles[i];
+                  x = radius * p.ringX;
+                  y = radius * p.ringY * 0.1;
+                  z = 0;
+                } else if (particleType === "chaos") {
+                  const p = particles[i];
+                  x = p.x;
+                  y = p.y;
+                  z = p.z;
+                }
+            
+                // Rotation
+                let xRot = x * Math.cos(angle) - z * Math.sin(angle);
+                let zRot = x * Math.sin(angle) + z * Math.cos(angle);
+                let yRot = y;
+            
+                let scale = 500 / (500 + zRot);
+                let px = xRot * scale;
+                let py = yRot * scale;
+            
+                ctx.beginPath();
+                ctx.arc(px, py, 1.5, 0, Math.PI * 2);
+                ctx.fillStyle = rainbowMode ? `hsl(${(angle * 100 + i) % 360}, 100%, 50%)` : color;
+                ctx.fill();
+              }
+            
+              ctx.restore();
+              requestAnimationFrame(draw);
+            }
+            
+            draw();
+            </script>
+            
     </body>
 </html>
