@@ -60,6 +60,16 @@ function closeFullscreen() {
     document.getElementById('fullscreenModal').style.display = 'none';
 }
 
+// Allgemeine Vollbild-Funktion für einzelne Bilder
+function openImageFullscreen(imageSrc, imageAlt) {
+    const fullscreenModal = document.getElementById('fullscreenModal');
+    const fullscreenImage = document.getElementById('fullscreenImage');
+    
+    fullscreenImage.src = imageSrc;
+    fullscreenImage.alt = imageAlt;
+    fullscreenModal.style.display = 'flex';
+}
+
 // Schließe das Modal wenn außerhalb geklickt wird
 window.onclick = function(event) {
     const modal = document.getElementById('certificateModal');

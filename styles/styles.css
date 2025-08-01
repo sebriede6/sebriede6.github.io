@@ -193,17 +193,20 @@ h1 {
 }
 
 .image-container img {
-  max-width: 25%;
+  max-width: 300px;
+  min-width: 200px;
   height: auto;
   border-radius: 10px;
   background-color: #090217;
   padding: 10px;
   transition: transform 0.3s ease-in-out;
-  border: 2px 
+  border: 2px solid white;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 .image-container img:hover {
-  transform: scale(1.5); 
+  transform: scale(1.1); 
 }
 
 .center-link {
@@ -396,17 +399,18 @@ input[type="range"], input[type="color"], select {
   display: none;
   justify-content: center;
   align-items: center;
-  overflow: auto;
+  padding: 40px;
+  box-sizing: border-box;
 }
 
 .fullscreen-image {
   max-width: 90vw;
-  max-height: 90vh;
+  max-height: 60vh;
   width: auto;
   height: auto;
   object-fit: contain;
   border: 2px solid white;
-  margin: auto;
+  display: block;
 }
 
 /* Responsive Design für kleinere Bildschirme */

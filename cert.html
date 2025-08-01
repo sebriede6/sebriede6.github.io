@@ -13,10 +13,10 @@
 
     <!-- Container für Bilder -->
     <div class="image-container">
-      <img src="images/Screenshot 2024-12-10 164131.png" alt="Zertifikate">
-      <img src="images/zert.png" alt="zertifikat" id="zert">
-      <img src="images/Screenshot 2025-04-28 085523.png" alt="Scrummaster-Zertifikat">
-      <img src="images/Screenshot 2025-06-23 232802.png" alt="Azure Fundamentals Zertifikat">
+      <img src="images/Screenshot 2024-12-10 164131.png" alt="Zertifikate" onclick="openImageFullscreen('images/Screenshot 2024-12-10 164131.png', 'Zertifikate')">
+      <img src="images/zert.png" alt="zertifikat" id="zert" onclick="openImageFullscreen('images/zert.png', 'Zertifikat')">
+      <img src="images/Screenshot 2025-04-28 085523.png" alt="Scrummaster-Zertifikat" onclick="openImageFullscreen('images/Screenshot 2025-04-28 085523.png', 'Scrummaster-Zertifikat')">
+      <img src="images/Screenshot 2025-06-23 232802.png" alt="Azure Fundamentals Zertifikat" onclick="openImageFullscreen('images/Screenshot 2025-06-23 232802.png', 'Azure Fundamentals Zertifikat')">
       <!-- Techstarter Zertifikat Vorschau -->
       <img src="images/Screenshot 2025-08-01 130043.png" alt="Techstarter Trägerzertifikat" class="certificate-preview" onclick="openCertificateModal()">
     </div>
@@ -25,7 +25,7 @@
     <div id="certificateModal" class="modal">
       <div class="modal-content">
         <span class="close" onclick="closeCertificateModal()">&times;</span>
-        <h2>Techstarter Trägerzertifikat Expert-in für Cloud</h2>
+        <h2>Techstarter Trägerzertifikat Experte für Cloud</h2>
         <img id="modalImage" src="images/Screenshot 2025-08-01 130043.png" alt="Techstarter Zertifikat" class="modal-image" onclick="openFullscreen()">
         <div class="modal-navigation">
           <button class="modal-nav-btn" onclick="showPage(1)">Seite 1</button>
