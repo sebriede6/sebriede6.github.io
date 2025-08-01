@@ -324,3 +324,159 @@ body {
 input[type="range"], input[type="color"], select {
   margin: 10px;
 }
+
+/* Modal für Zertifikat-Galerie */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 1000px;
+  top: 5%;
+  text-align: center;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 10px auto;
+  border: 2px solid white;
+  border-radius: 10px;
+  object-fit: contain;
+  image-rendering: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.modal-image:hover {
+  transform: scale(1.02);
+}
+
+.fullscreen-btn {
+  background-color: transparent;
+  color: cyan;
+  border: 2px solid cyan;
+  padding: 8px 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.fullscreen-btn:hover {
+  background-color: cyan;
+  color: black;
+}
+
+/* Vollbild-Modus */
+.fullscreen-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.98);
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.fullscreen-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 2px solid white;
+  margin: auto;
+}
+
+/* Responsive Design für kleinere Bildschirme */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    padding: 10px;
+    top: 2%;
+  }
+  
+  .modal-image {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .modal-navigation {
+    margin: 15px 0;
+  }
+  
+  .modal-nav-btn, .fullscreen-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+    margin: 5px;
+  }
+  
+  .fullscreen-image {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: cyan;
+}
+
+.modal-navigation {
+  margin: 20px 0;
+}
+
+.modal-nav-btn {
+  background-color: transparent;
+  color: cyan;
+  border: 2px solid cyan;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.modal-nav-btn:hover {
+  background-color: cyan;
+  color: black;
+}
+
+.certificate-preview {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.certificate-preview:hover {
+  transform: scale(1.05);
+}

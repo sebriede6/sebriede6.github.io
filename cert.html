@@ -6,6 +6,7 @@
     <title>Meine bisherige Arbeit</title>
     <link rel="stylesheet" href="styles/styles.css">
     <script src="js/script.js" defer></script>
+    <script src="js/certificate-modal.js" defer></script>
   </head>
   <body>
     <h1>Meine bisherigen Arbeiten und Zertifikate</h1>
@@ -16,6 +17,30 @@
       <img src="images/zert.png" alt="zertifikat" id="zert">
       <img src="images/Screenshot 2025-04-28 085523.png" alt="Scrummaster-Zertifikat">
       <img src="images/Screenshot 2025-06-23 232802.png" alt="Azure Fundamentals Zertifikat">
+      <!-- Techstarter Zertifikat Vorschau -->
+      <img src="images/Screenshot 2025-08-01 130043.png" alt="Techstarter Trägerzertifikat" class="certificate-preview" onclick="openCertificateModal()">
+    </div>
+
+    <!-- Modal für Techstarter Zertifikat -->
+    <div id="certificateModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeCertificateModal()">&times;</span>
+        <h2>Techstarter Trägerzertifikat Expert-in für Cloud</h2>
+        <img id="modalImage" src="images/Screenshot 2025-08-01 130043.png" alt="Techstarter Zertifikat" class="modal-image" onclick="openFullscreen()">
+        <div class="modal-navigation">
+          <button class="modal-nav-btn" onclick="showPage(1)">Seite 1</button>
+          <button class="modal-nav-btn" onclick="showPage(2)">Seite 2</button>
+          <button class="modal-nav-btn" onclick="showPage(3)">Seite 3</button>
+          <button class="fullscreen-btn" onclick="openFullscreen()">📱 Vollbild</button>
+        </div>
+        <p id="pageInfo">Seite 1 von 3</p>
+        <p style="font-size: 14px; color: #ccc; margin-top: 10px;">💡 Klicke auf das Bild für Vollbild-Ansicht</p>
+      </div>
+    </div>
+
+    <!-- Vollbild Modal -->
+    <div id="fullscreenModal" class="fullscreen-modal" onclick="closeFullscreen()">
+      <img id="fullscreenImage" src="" alt="" class="fullscreen-image">
     </div>
 
     <!-- Navigation -->
