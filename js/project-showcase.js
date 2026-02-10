@@ -55,6 +55,11 @@ const screenshots = [
     desc: 'Quiz-Auswertung / Ergebnisse.',
   },
   {
+    file: 'gesamtergebnis.png',
+    title: 'Gesamtergebnis',
+    desc: 'Zusammenfassung der Gesamtauswertung.',
+  },
+  {
     file: 'trading-quiz3.png',
     title: 'Quiz Fragekarte',
     desc: 'Einzelne Fragekarte.',
@@ -108,6 +113,21 @@ const screenshots = [
     file: 'pdf-export.png',
     title: 'PDF Export',
     desc: 'Export-Ansicht (PDF).',
+  },
+  {
+    file: 'impressum.png',
+    title: 'Impressum',
+    desc: 'Impressum-Seite der Anwendung.',
+  },
+  {
+    file: 'datenschutzerklärung.png',
+    title: 'Datenschutzerklärung',
+    desc: 'Datenschutz-Hinweise und Richtlinien.',
+  },
+  {
+    file: 'risikohinweis.png',
+    title: 'Risikohinweis',
+    desc: 'Risikohinweise zum Trading.',
   },
   {
     file: 'todos.png',

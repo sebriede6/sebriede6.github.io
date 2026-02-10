@@ -229,6 +229,7 @@ a {
   aspect-ratio: 4 / 3;
   overflow: hidden;
   background: #0a0c12;
+  position: relative;
 }
 
 .shot img {
