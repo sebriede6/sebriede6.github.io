@@ -387,6 +387,26 @@ input[type="range"], input[type="color"], select {
   color: black;
 }
 
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 60px auto 20px;
+}
+
+.project-links a {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.project-note {
+  margin: 6px auto 40px;
+  text-align: center;
+  color: #c4c8d4;
+  font-size: 15px;
+  font-family: monospace;
+}
+
 /* Vollbild-Modus */
 .fullscreen-modal {
   position: fixed;

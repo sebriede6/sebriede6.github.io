@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projekt Showcase - Trading Dashboard</title>
+  <link rel="stylesheet" href="./styles/project-showcase.css">
+</head>
+<body>
+  <div class="page-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="badge">Aktuelles Projekt · Trading Dashboard</span>
+        <h1>Ein Fullstack Trading-Cockpit, präsentiert mit klaren Screenshots.</h1>
+        <p>Kein Deployment noetig: Alle Screens stammen direkt aus der laufenden Anwendung. So bekommst du einen kompakten Eindruck von Flows, Monitoring, Exports und Lernmodulen.</p>
+
+        <div class="stats-row">
+          <div class="stat">
+            <strong>Realtime & Monitoring</strong>
+            <span>Grafana, Prometheus, Alerts</span>
+          </div>
+          <div class="stat">
+            <strong>Trading UX</strong>
+            <span>Formulare, Guides, Quiz, Profile</span>
+          </div>
+          <div class="stat">
+            <strong>Daten & Exporte</strong>
+            <span>CSV, PDF, Statistiken</span>
+          </div>
+        </div>
+
+        <div class="chips">
+          <span class="chip">Dark & Light UI</span>
+          <span class="chip">Interaktive Quizflows</span>
+          <span class="chip">Strategie-Guides</span>
+          <span class="chip">Aufgabenboard</span>
+          <span class="chip">Monitoring Stack</span>
+        </div>
+
+        <p class="note">Hinweis: Dies ist ein visueller Rundgang anhand der Screenshots, ohne Live-Deployment.</p>
+      </div>
+
+      <div class="hero-visual">
+        <img src="./images/my-fullstack-app/home-desktop.png" alt="Dashboard Landing">
+        <div class="overlay"></div>
+        <div class="label">Start-Dashboard</div>
+      </div>
+    </section>
+
+    <h2 class="section-title">Highlights in Kürze</h2>
+    <p class="section-subtitle">Was die App abdeckt: vom sauberen Trading-Workflow über Lernmodule bis hin zu Systemmetriken und Exporten.</p>
+
+    <div class="feature-grid">
+      <article class="feature-card">
+        <div class="icon">📊</div>
+        <h3>Monitoring & Observability</h3>
+        <p>Dashboards in Grafana, Targets in Prometheus und Alerting-Ansichten halten den Betrieb transparent.</p>
+        <div class="chips">
+          <span class="chip">Grafana</span>
+          <span class="chip">Prometheus</span>
+          <span class="chip">Alert Manager</span>
+        </div>
+      </article>
+      <article class="feature-card">
+        <div class="icon">🧭</div>
+        <h3>Geführte Trading-Flows</h3>
+        <p>Strukturierte Formulare, Guides und Quiz-Komponenten helfen beim planvollen Handeln.</p>
+        <div class="chips">
+          <span class="chip">Formulare</span>
+          <span class="chip">Strategie-Guides</span>
+          <span class="chip">Quiz</span>
+        </div>
+      </article>
+      <article class="feature-card">
+        <div class="icon">💾</div>
+        <h3>Daten & Exporte</h3>
+        <p>Tabellen lassen sich als CSV oder PDF exportieren, Statistiken werden sauber aufbereitet.</p>
+        <div class="chips">
+          <span class="chip">CSV</span>
+          <span class="chip">PDF</span>
+          <span class="chip">Charts</span>
+        </div>
+      </article>
+      <article class="feature-card">
+        <div class="icon">🎨</div>
+        <h3>UI-Varianten</h3>
+        <p>Dark- und Light-Varianten zeigen dieselben Flows in zwei Stilen, inklusive Profile und Boards.</p>
+        <div class="chips">
+          <span class="chip">Dark Mode</span>
+          <span class="chip">Light Mode</span>
+          <span class="chip">Responsive</span>
+        </div>
+      </article>
+    </div>
+
+    <h2 class="section-title">Screenshot-Walkthrough <span class="chip" data-shot-count></span></h2>
+    <p class="section-subtitle">Klicke ein Motiv, um es gross zu sehen.</p>
+
+    <div class="gallery-grid" id="gallery" data-gallery></div>
+
+    <div class="cta">
+      <div>
+        <h3>Mehr erfahren?</h3>
+        <p class="note">Die Seite ist offline tauglich und zeigt alles über Screenshots. Für Code oder Demo einfach Bescheid geben.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="button primary" href="kontakt.html">Kontakt aufnehmen</a>
+        <a class="button secondary" href="index.html">Zur Startseite</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" data-modal>
+    <div class="modal-card">
+      <img src="" alt="" loading="lazy">
+      <div class="meta">
+        <div>
+          <strong data-modal-title></strong>
+          <p data-modal-desc></p>
+        </div>
+        <button class="close-btn" data-close>Schliessen</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/project-showcase.js" defer></script>
+</body>
+</html>
